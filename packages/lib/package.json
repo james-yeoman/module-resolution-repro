@@ -1,0 +1,17 @@
+{
+  "name": "@repro/lib",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint:type": "tsc --build",
+    "lint:check": "yarn lint:type && prettier -c ./src",
+    "lint:fix": "prettier -w ./src"
+  },
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "bwip-js": "^4.1.1"
+  },
+  "devDependencies": {
+    "typescript": "*"
+  }
+}

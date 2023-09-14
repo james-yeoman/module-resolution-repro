@@ -1,0 +1,21 @@
+{
+	"name": "@repro/root",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"packageManager": "yarn@3.3.0",
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"app": "yarn workspace @repro/app",
+		"lib": "yarn workspace @repro/lib"
+	},
+	"devDependencies": {
+		"typescript": "*"
+	},
+	"resolutions": {
+		"prettier": "2.x.x",
+		"typescript": "5.1.6"
+	}
+}

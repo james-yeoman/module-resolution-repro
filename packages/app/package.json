@@ -1,0 +1,27 @@
+{
+  "name": "@repro/app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint:type": "tsc --build",
+    "lint:check": "yarn lint:type && prettier -c ./src",
+    "lint:fix": "prettier -w ./src",
+    "cleanDeps": "rm -rf node_modules/.vite",
+    "generateViteLog": "vite --debug 2>&1 | tee vite-log.txt",
+    "logBwipViteResolution": "yarn cleanDeps && yarn generateViteLog"
+  },
+  "dependencies": {
+    "@repro/lib": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "4.x.x",
+    "prettier": "*",
+    "typescript": "*",
+    "vite": "4.x.x"
+  }
+}
